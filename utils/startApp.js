@@ -9,10 +9,10 @@ import navigationEvents from '../events/navigationEvents';
 import { showBooks } from '../pages/books';
 import { showAuthors } from '../pages/authors';
 
-const startApp = () => {
-  domBuilder(); // BUILD THE DOM
-  domEvents(); // ADD THE EVENT LISTENTERS TO THE DOM
-  formEvents(); // ADD FORM EVENT LISTENTERS TO THE DOM
+const startApp = (user) => {
+  domBuilder(user); // BUILD THE DOM
+  domEvents(user); // ADD THE EVENT LISTENTERS TO THE DOM
+  formEvents(user); // ADD FORM EVENT LISTENTERS TO THE DOM
   navBar(); // DYNAMICALLY ADD THE NAV
   logoutButton(); // ADD THE LOGOUT BUTTON COMPONENT
   navigationEvents(); // ATTACH THE EVENT LISTENERS TO THE NAVBAR
